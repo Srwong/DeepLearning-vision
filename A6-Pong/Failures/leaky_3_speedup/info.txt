@@ -1,0 +1,13 @@
+memory 40k
+leaky relu alpha 0.3
+training had a decay of 0.99997
+at 2_9900 stopped with a remaining epsilon value of 0.5521094848913968
+Now the decay was reduced to 0.9997 to speed up the arrival to explotation
+
+interrupted learning two times
+
+#2_9900  :  0.5521094848913968  :  -21.0
+#3_5600  :  0.10287290748165151  :  -21.0
+#4_7400  :  0.011169214091899493  :  -21.0
+
+failure

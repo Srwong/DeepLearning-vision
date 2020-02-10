@@ -1,0 +1,19 @@
+decay=9997
+memory 40k
+
+model = models.Sequential()
+        model.add(layers.Conv2D(16, (8,8), strides=4, input_shape = (4,84,84), data_format="channels_first"))
+        model.add(layers.LeakyReLU(alpha=0.3))
+        model.add(layers.Conv2D(32, (4,4), strides=2))
+        model.add(layers.LeakyReLU(alpha=0.3))
+        model.add(layers.Flatten())
+        model.add(layers.Dense(256, activation='relu'))
+        model.add(layers.Dense(self.action_size, activation='softmax')) #movements
+
+#1_5300 : 0.17218877278994726 epsilon final value  
+#1_5800  :  0.0302147537239284  :  -21.0
+#2_9900  :  0.009997793671595201  :  -21.0
+#A partir del 2_9900 todos usan el mismo epsilon
+
+
+NOT ENOUGH TIME TO LEARN HOW TO MOVE
